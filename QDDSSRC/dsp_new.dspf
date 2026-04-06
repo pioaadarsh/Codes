@@ -1,0 +1,36 @@
+     A*%%TS  SD  20250304  003648  AADARSH     REL-V7R5M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A          R CRUDR
+     A*%%TS  SD  20250304  003648  AADARSH     REL-V7R5M0  5770-WDS
+     A                                      CF03(03 'exit')
+     A                                      CF10(10 'insert')
+     A                                      CF23(23 'delete')
+     A                                      CF05(05 'refresh')
+     A                                      CF19(19 'update')
+     A                                  1 30'CRUD operations'
+     A                                      COLOR(BLU)
+     A                                  1  2USER
+     A                                  1 71DATE
+     A                                      EDTCDE(Y)
+     A                                  2 71TIME
+     A                                  6  6'Id'
+     A                                      COLOR(WHT)
+     A            D1EMPID       10Y 0B  6 14EDTCDE(4)
+     A                                  9  6'Name'
+     A                                      COLOR(WHT)
+     A            D1EMPNAME     10A  B  9 14
+     A                                 12  6'Salary'
+     A                                      COLOR(WHT)
+     A            D1EMPSAL      10Y 0B 12 14EDTCDE(4)
+     A            D1ERROR       30A  O 23  7COLOR(WHT)
+     A                                 21  8'F3=Exit'
+     A                                      COLOR(BLU)
+     A                                 21 19'F10=Insert'
+     A                                      COLOR(BLU)
+     A                                 21 32' F23Delete'
+     A                                      COLOR(BLU)
+     A                                 21 48'F5=Refresh'
+     A                                      COLOR(BLU)
+     A                                 21 62'F19=Update'
+     A                                      COLOR(BLU)

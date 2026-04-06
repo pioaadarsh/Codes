@@ -1,0 +1,24 @@
+     **free
+       dcl-f Empl_pf1 usage(*input: *output :*update) keyed;
+       dcl-f Dsply1 Workstn;
+       dcl-s w1empid like(Emp_id);
+       *inlr=*on;
+       Dow *in03=*off;
+         Exfmt dsply1r;
+         w1empid=d1empid;
+         chain w1empid empl_pf1r;
+         if %found();
+           d1error='Record Already Exists';
+         else;
+           if d1empname='';
+             d1error='Enter the name';
+           elseif d1empsal <= 0;
+             d1error='Salary cant be blank';
+           else;
+             Emp_id=d1empid ;
+             Emp_name=d1empname;
+             Emp_sal=d1empsal;
+             write empl_pf1r;
+           endif;
+         endif;
+       Enddo;

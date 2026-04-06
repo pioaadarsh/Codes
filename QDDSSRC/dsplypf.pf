@@ -1,0 +1,16 @@
+                R DSPLYPFR
+                  EMP_ID         3S 0       COLHDG('EMPLOYEE ID')
+                                            TEXT('EMPLOYEE ID')
+                  EMP_NAME      20A         COLHDG('EMPLOYEE NAME')
+                                            TEXT('EMPLOYEE NAME')
+                  EMP_SAL       10S 0       COLHDG('EMPLOYEE SALARY')
+                                            TEXT('EMPLOYEE SALARY')
+                  EMP_PH_NO     10S 0       COLHDG('EMPLOYEE PHONE NO')
+                                            TEXT('EMPLOYEE PHONE NO')
+                  EMP_ADD       20A         COLHDG('EMPLOYEE ADDRESS')
+                                            TEXT('EMPLOYEE ADDRESS')
+                  EMP_EML       30A         COLHDG('EMPLOYEE EMAIL ID')
+                                            TEXT('EMPLOYEE EMAIL ID')
+                  EMP_DOB       10S 0       COLHDG('EMPLOYEE DOB')
+                                            TEXT('EMPLOYEE DOB')
+                K EMP_ID

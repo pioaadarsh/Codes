@@ -1,0 +1,6 @@
+                R PRACPFR
+                  ROLLNO         5S 0       COLHDG('ROLLNO')
+                                            TEXT('ROLLNO')
+                  NAME          20A         COLHDG('NAME')
+                                            TEXT('NAME')
+                K ROLLNO

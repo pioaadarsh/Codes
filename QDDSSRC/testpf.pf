@@ -1,0 +1,4 @@
+                R TESTPFR
+                  TEST_VAR       1S 0
+                  DATE_VAR        L         DATFMT(*MDY)
+                  TEST_VAR2     10A

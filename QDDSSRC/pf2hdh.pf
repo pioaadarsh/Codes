@@ -1,0 +1,10 @@
+                R PF2R
+                  EMP_ID        10S         COLHDG('EMPLOYEE ID')
+                                            TEXT('EMPLOYEE ID')
+                  EMP_NAME      10A         COLHDG('EMPLOYEE NAME')
+                                            TEXT('EMPLOYEE NAME')
+                  DEPT          10A         COLHDG('DEPT')
+                                            TEXT('DEPT')
+                K EMP_ID
+                K EMP_NAME
+                K DEPT

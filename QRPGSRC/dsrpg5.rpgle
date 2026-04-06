@@ -1,0 +1,46 @@
+     **free
+       dcl-f Empl_pf1 usage(*input: *output: *update: *delete) keyed;
+       dcl-f Dsp_new Workstn;
+       dcl-s w1empid like(Emp_id);
+       *inlr=*on;
+       dow *in03=*off;
+       if *in05=*on;
+         clear crudr;
+         clear d1error;
+       endif;
+         exfmt crudr;
+         emp_id = d1empid;
+         w1empid = emp_id;
+         chain w1empid empl_pf1r;
+
+         if %found();
+           if *in23=*on;
+             delete empl_pf1r;
+             clear crudr;
+             d1error = 'Record Deleted';
+           elseif *in19=*on;
+               emp_name=d1empname;
+               emp_sal=d1empsal;
+               update empl_pf1r;
+               clear crudr;
+               d1error='Record Updated';
+           else;
+             d1empid = emp_id ;
+             d1empname = emp_name;
+             d1empsal = emp_sal;
+           endif;
+
+         else;
+           if *in10 = *on;
+             emp_id = d1empid ;
+             emp_name = d1empname;
+             emp_sal = d1empsal;
+             write empl_pf1r;
+             clear crudr;
+             d1error = 'Record Inserted';
+           else;
+             d1error='Record not found';
+           endif;
+         endif;
+       enddo;
+       *inlr=*on ;

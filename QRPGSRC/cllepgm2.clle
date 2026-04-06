@@ -1,0 +1,18 @@
+             PGM
+
+             DCL        VAR(&MSG1) TYPE(*CHAR) LEN(50)
+             DCL        VAR(&MSG2) TYPE(*CHAR) LEN(50)
+             DCL        VAR(&MSG3) TYPE(*CHAR) LEN(50)
+             DCL        VAR(&str3) TYPE(*CHAR) LEN(25)
+             DCL        VAR(&str4) TYPE(*CHAR) LEN(25)
+
+             RTVJOBA    JOB(&STR3) USER(&STR4)
+
+             CHGVAR     VAR(&MSG1) VALUE('abc  ' *cat &str4)
+             CHGVAR     VAR(&MSG2) VALUE('abc  ' *bcat &str4)
+             CHGVAR     VAR(&MSG3) VALUE('abc  ' *tcat &str4)
+
+             SNDUSRMSG  MSG(&MSG1)
+             SNDUSRMSG  MSG(&MSG2)
+             SNDUSRMSG  MSG(&MSG3)
+             ENDPGM

@@ -1,0 +1,195 @@
+     A*%%TS  SD  20250523  014501  AADARSHA    REL-V7R5M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      INDARA
+     A                                      CF03(03 'exit')
+     A                                      CF12(12 'cancel')
+     A                                      CF05(05 'refresh')
+     A                                      CF06(06 'add')
+     A                                      CF23(23 'confirm')
+     A                                      CF04(04 'prompt')
+     A          R HEADER
+     A*%%TS  SD  20250318  052927  AADARSH     REL-V7R5M0  5770-WDS
+     A                                  1  3USER
+     A                                  2 69TIME
+     A                                  1 69DATE
+     A                                      EDTCDE(Y)
+     A                                  1 30'Programmers.io'
+     A                                      COLOR(BLU)
+     A          R SFLDTL                    SFL
+     A*%%TS  SD  20250523  014501  AADARSHA    REL-V7R5M0  5770-WDS
+     A  30                                  SFLNXTCHG
+     A            SFLID          3Y 0O 11  7EDTCDE(4)
+     A            SFLNAME       15A  O 11 24
+     A            SFLSALARY      8Y 0O 11 43EDTCDE(4)
+     A            SFLDATE        8Y 0O 11 64EDTWRD('  /  /    ')
+     A            SFLOPT         1Y 0B 11  3EDTCDE(4)
+     A  51                                  DSPATR(PC)
+     A            SFLADRS       20A  O 12 24
+     A            SFLFLD         7A  O 12  7COLOR(WHT)
+     A          R SFLCTL1                   SFLCTL(SFLDTL)
+     A*%%TS  SD  20250410  090534  AADARSH     REL-V7R5M0  5770-WDS
+     A                                      SFLSIZ(9999)
+     A                                      SFLPAG(0004)
+     A                                      OVERLAY
+     A  31                                  SFLDSP
+     A  32                                  SFLDSPCTL
+     A  33                                  SFLCLR
+     A  34                                  SFLEND(*MORE)
+     A                                      SFLCSRRRN(&RELRCD)
+     A N77                                  SFLDROP(CF11)
+     A            MODE           1A  H
+     A            RELRCD         5S 0H
+     A            SFLRRN         4S 0H      SFLRCDNBR(*TOP)
+     A            SORTING        2Y 0B  4  2PSHBTNFLD
+     A                                      PSHBTNCHC(1 '>SORT-ASC')
+     A                                      PSHBTNCHC(2 '>SORT-DESC')
+     A                                  6  2'Type options, press Enter.'
+     A                                      COLOR(BLU)
+     A                                  7  2'2=Edit  4=Delete  5=Display'
+     A                                      COLOR(BLU)
+     A                                  4 45'Position to  . . . . .'
+     A            MSC0001        3A  O 10  2COLOR(WHT)
+     A                                      MSGID(MSC 0001 AADARSH/DMSGF)
+     A            MSC0002       15A  O 10  7COLOR(WHT)
+     A                                      MSGID(MSC 0002 AADARSH/DMSGF)
+     A            MSC0003       15A  O 10 24COLOR(WHT)
+     A                                      MSGID(MSC 0003 AADARSH/DMSGF)
+     A            MSC0004       18A  O 10 43COLOR(WHT)
+     A                                      MSGID(MSC 0004 AADARSH/DMSGF)
+     A            MSC0005       15A  O 10 64COLOR(WHT)
+     A                                      MSGID(MSC 0005 AADARSH/DMSGF)
+     A            S1POSCUS      10A  I  4 68CHECK(LC)
+     A          R FOOTER
+     A*%%TS  SD  20250327  064031  AADARSH     REL-V7R5M0  5770-WDS
+     A                                      OVERLAY
+     A            MSG           70A  O 24  2COLOR(WHT)
+     A            MFT0001        7A  O 23  2COLOR(BLU)
+     A                                      MSGID(MFT 0001 AADARSH/DMSGF)
+     A            MFT0002       10A  O 23 11COLOR(BLU)
+     A                                      MSGID(MFT 0002 AADARSH/DMSGF)
+     A  20                                  DSPATR(ND)
+     A            MFT0003       10A  O 23 41COLOR(BLU)
+     A                                      MSGID(MFT 0003 AADARSH/DMSGF)
+     A            MFT0004        6A  O 23 23COLOR(BLU)
+     A                                      MSGID(MFT 0004 AADARSH/DMSGF)
+     A  21                                  DSPATR(ND)
+     A            MFT0005       11A  O 23 53COLOR(BLU)
+     A                                      MSGID(MFT 0005 AADARSH/DMSGF)
+     A  22                                  DSPATR(ND)
+     A            MFT0007        8A  O 23 31COLOR(BLU)
+     A                                      MSGID(MFT 0007 AADARSH/DMSGF)
+     A  24                                  DSPATR(ND)
+     A          R INEER_SCR1
+     A*%%TS  SD  20250523  014501  AADARSHA    REL-V7R5M0  5770-WDS
+     A                                      RTNCSRLOC(&RCD &FLD &POS)
+     A                                      OVERLAY
+     A            FLD           10A  H
+     A            RCD           10A  H
+     A            POS            4S 0H
+     A            HEADING1      14A  O  4 33COLOR(WHT)
+     A            MIC0001       18A  O  6  2COLOR(WHT)
+     A                                      MSGID(MIC 0001 AADARSH/DMSGF)
+     A            MIC0002       18A  O  8  2COLOR(WHT)
+     A                                      MSGID(MIC 0002 AADARSH/DMSGF)
+     A            MIC0003       18A  O 10  2COLOR(WHT)
+     A                                      MSGID(MIC 0003 AADARSH/DMSGF)
+     A            MIC0004       18A  O 12  2COLOR(WHT)
+     A                                      MSGID(MIC 0004 AADARSH/DMSGF)
+     A            MIC0005       18A  O 14  2COLOR(WHT)
+     A                                      MSGID(MIC 0005 AADARSH/DMSGF)
+     A            MIC0006       18A  O 16  2COLOR(WHT)
+     A                                      MSGID(MIC 0006 AADARSH/DMSGF)
+     A            D2ID           3Y 0B  6 22EDTCDE(4)
+     A  50                                  DSPATR(RI)
+     A N97                                  DSPATR(UL)
+     A  50                                  DSPATR(PC)
+     A  97                                  DSPATR(PR)
+     A            D2NAME        20A  B  8 22
+     A  53                                  DSPATR(RI)
+     A N99                                  DSPATR(UL)
+     A  53                                  DSPATR(PC)
+     A  98                                  DSPATR(PR)
+     A                                      CHECK(LC)
+     A            D2ADRS        20A  B 12 22
+     A  55                                  DSPATR(RI)
+     A N99                                  DSPATR(UL)
+     A  55                                  DSPATR(PC)
+     A  96                                  DSPATR(PR)
+     A                                      CHECK(LC)
+     A            D2PHNO        10Y 0B 10 22EDTCDE(4)
+     A  54                                  DSPATR(RI)
+     A N99                                  DSPATR(UL)
+     A  54                                  DSPATR(PC)
+     A  98                                  DSPATR(PR)
+     A            D2SAL         10Y 0B 16 22EDTCDE(4)
+     A  57                                  DSPATR(RI)
+     A N99                                  DSPATR(UL)
+     A  57                                  DSPATR(PC)
+     A  98                                  DSPATR(PR)
+     A            D2DOB          8Y 0B 14 22
+     A  56                                  DSPATR(RI)
+     A N99                                  DSPATR(UL)
+     A  56                                  DSPATR(PC)
+     A  98                                  DSPATR(PR)
+     A                                      EDTWRD('  /  /    ')
+     A            MFT0006       12A  O 12 45COLOR(BLU)
+     A                                      MSGID(MFT 0006 AADARSH/DMSGF)
+     A N52                                  DSPATR(ND)
+     A            MIC0007       18A  O 18  2COLOR(WHT)
+     A                                      MSGID(MIC 0007 AADARSH/DMSGF)
+     A            D2EMAIL       30A  B 18 22
+     A  58                                  DSPATR(RI)
+     A N99                                  DSPATR(UL)
+     A  58                                  DSPATR(PC)
+     A  98                                  DSPATR(PR)
+     A                                      CHECK(LC)
+     A          R DELETESCR                 SFL
+     A*%%TS  SD  20250319  010718  AADARSH     REL-V7R5M0  5770-WDS
+     A            DELID          3S 0O  9  2
+     A            DELNAME       15A  O  9 24
+     A          R DELSCRCTL                 SFLCTL(DELETESCR)
+     A*%%TS  SD  20250319  075117  AADARSH     REL-V7R5M0  5770-WDS
+     A                                      OVERLAY
+     A  41                                  SFLDSP
+     A  42                                  SFLDSPCTL
+     A  43                                  SFLCLR
+     A  44                                  SFLEND
+     A                                      SFLSIZ(9999)
+     A                                      SFLPAG(0008)
+     A            MSC0002       15A  O  8  2COLOR(WHT)
+     A                                      MSGID(MSC 0002 AADARSH/DMSGF)
+     A            MSC0003       15A  O  8 24COLOR(WHT)
+     A                                      MSGID(MSC 0003 AADARSH/DMSGF)
+     A            MSH0002       30A  O  5  2COLOR(BLU)
+     A                                      MSGID(MSH 0002 AADARSH/DMSGF)
+     A          R ADDRESS                   SFL
+     A*%%TS  SD  20250320  001355  AADARSH     REL-V7R5M0  5770-WDS
+     A                                      SFLNXTCHG
+     A            S2OPT          1Y 0B  5  3EDTCDE(4)
+     A            S2CITY        10A  O  5  9
+     A          R ADDRESSCTL                SFLCTL(ADDRESS)
+     A*%%TS  SD  20250320  044204  AADARSH     REL-V7R5M0  5770-WDS
+     A                                      SFLSIZ(9999)
+     A                                      SFLPAG(0005)
+     A                                      WINDOW(WINDOW)
+     A                                      OVERLAY
+     A  61                                  SFLDSP
+     A  62                                  SFLDSPCTL
+     A  63                                  SFLCLR
+     A  64                                  SFLEND
+     A                                  2  3'Choose the City'
+     A                                      COLOR(BLU)
+     A                                  4  2'Opt'
+     A                                      COLOR(WHT)
+     A                                  4  9'Cities'
+     A                                      COLOR(WHT)
+     A                                  3  3'Take 1 to Select '
+     A                                      COLOR(WHT)
+     A          R WINDOW
+     A*%%TS  SD  20250321  015933  AADARSH     REL-V7R5M0  5770-WDS
+     A                                      WINDOW(8 10 12 30)
+     A                                      OVERLAY
+     A                                 10  1'F12=cancel'
+     A                                      COLOR(BLU)
+     A            WNDERR        20   O 11  1COLOR(WHT)

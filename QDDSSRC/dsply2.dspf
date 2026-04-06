@@ -1,0 +1,27 @@
+     A*%%TS  SD  20250303  055533  AADARSH     REL-V7R5M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      CF03(03 'exit')
+     A          R DSPLY2R
+     A*%%TS  SD  20250303  055533  AADARSH     REL-V7R5M0  5770-WDS
+     A                                  1 28'Programmers.io'
+     A                                      COLOR(WHT)
+     A                                  2 28'Employee Record'
+     A                                      COLOR(WHT)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                  2 72TIME
+     A                                  2  1USER
+     A                                  8  7'Employee Id  '
+     A                                  9  7'Employee Name'
+     A  51                                  DSPATR(ND)
+     A            D1EMPNAME     10A  B  9 23
+     A  51                                  DSPATR(ND)
+     A                                 22  7'F3=Exit'
+     A                                      COLOR(BLU)
+     A                                 10  7'Employee Salary'
+     A  51                                  DSPATR(ND)
+     A            D1EMPID       10Y 0B  8 23EDTCDE(4)
+     A            D1EMPSAL      10Y 0B 10 23EDTCDE(4)
+     A  51                                  DSPATR(ND)
+     A            D1ERROR       70A  O 21  6COLOR(WHT)

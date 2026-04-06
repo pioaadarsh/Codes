@@ -1,0 +1,7 @@
+                R JOINLFR                   JFILE(PF1 PF2)
+                J                           JOIN(PF1 PF2)
+                                            JFLD(STU_ID EMP_ID)
+                  STU_ID
+                  STU_NAME
+                  EMP_ID
+                  EMP_NAME

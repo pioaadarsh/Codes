@@ -1,0 +1,20 @@
+     A*%%TS  SD  20250327  071724  AADARSH     REL-V7R5M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      CF03(03 'Exit')
+     A          R RADIO
+     A*%%TS  SD  20250327  071724  AADARSH     REL-V7R5M0  5770-WDS
+     A                                  1 35'Push'
+     A                                      COLOR(WHT)
+     A            GENDER         2Y 0B  4 10PSHBTNFLD
+     A                                      PSHBTNCHC(1 '>MALE')
+     A                                      PSHBTNCHC(2 '>FEMALE')
+     A                                      PSHBTNCHC(3 '>OTHER')
+     A                                 23  3'F3=EXIT'
+     A                                      COLOR(BLU)
+     A                                  3  2'Please select gender'
+     A                                 13 22'Gender Selected by User:'
+     A                                      COLOR(WHT)
+     A            CHOICE        20A  O 13 47
+     A                                  1 40'Button'
+     A                                      COLOR(WHT)

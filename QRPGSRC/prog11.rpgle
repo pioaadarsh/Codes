@@ -1,0 +1,8 @@
+     FRPF1      uf   e           k DISK
+     C                   EVAL      STU_ID=103
+     C     STU_ID        CHAIN(E)  RPF1R
+     C                   DOW       NOT %eof(RPF1)
+     C                   DELETE    RPF1R
+     C     STU_ID        READE     RPF1R
+     C                   ENDDO
+     C                   EVAL      *inlr=*on

@@ -1,0 +1,21 @@
+     **free
+       dcl-s num zoned(10);
+       dcl-s sum zoned(10);
+       dcl-s rem zoned(10);
+       dcl-s i zoned(10);
+       dcl-s limit zoned(10);
+       dsply 'Enter the number' ''num;
+       sum=0;
+       limit=num/2;
+       for i=1 to limit;
+         rem=%rem(num:i);
+         if rem=0;
+           sum=i+sum;
+         endif;
+       endfor;
+       if (sum=num);
+         dsply 'The number is perfect';
+       else;
+         dsply 'The number is not perfect';
+       endif;
+       *inlr=*on;

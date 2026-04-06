@@ -1,0 +1,9 @@
+                R RPF1R
+                  STU_ID         5S 0       COLHDG('STUDENT ID')
+                                            TEXT('STUDENT ID')
+                  STU_NAME      20A         COLHDG('STUDENT NAME')
+                                            TEXT('STUDENT NAME')
+                  STU_CLASS      2S 0       COLHDG('STUDENT CLASS')
+                                            TEXT('STUDENT CLASS')
+                K STU_ID
+                K STU_NAME

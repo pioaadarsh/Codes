@@ -1,0 +1,25 @@
+     **free
+       Dcl-S Str char(40);
+       Dcl-S i zoned(2);
+       Dcl-S Length zoned(2);
+       Dcl-S Count zoned(2);
+       Dcl-S D_Count zoned(2);
+       Dcl-S Ans zoned(2);
+       Str='abcbdcbbdsnhmbdb';
+       Length=%len(%trim(Str));
+       Count=0;
+       D_Count=0;
+       for i=1 to Length;
+         if (%subst(str:i:1)='b');
+           Count=Count+1;
+             if Count=5;
+               Ans=i;
+             endif;
+         endif;
+         if (%subst(str:i:1)='d');
+           D_Count=D_count+1;
+         endif;
+       endfor;
+       Dsply 'Position of 5th b is :' ''Ans;
+       Dsply 'Count of number of d is :' ''D_Count;
+       *Inlr=*On;

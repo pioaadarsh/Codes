@@ -1,0 +1,23 @@
+     **free
+       dcl-f Empl_pf1 usage(*input: *output :*update) keyed;
+       dcl-f Dsply1 Workstn;
+       dcl-s w1empid like(Emp_id);
+       *in51=*on;
+        dow *in03=*off ;
+          exfmt dsply1r;
+          emp_id = d1empid;
+          w1empid = emp_id;
+          chain w1empid empl_pf1r;
+          if %found() ;
+            clear d1error;
+            d1error = 'update the entries';
+            emp_name = d1empname;
+            emp_sal = d1empsal;
+            update empl_pf1r;
+            d1error = 'Record updated';
+          else;
+            clear d1error;
+            d1error = 'Record not found';
+          endif;
+        enddo;
+           *inlr=*on;

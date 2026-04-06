@@ -1,0 +1,8 @@
+                R PF1R
+                  STU_ID        10S 0       COLHDG('STUDENT ID')
+                                            TEXT('STUDENT ID')
+                  STU_NAME      10A         COLHDG('STUDENT NAME')
+                                            TEXT('STUDENT NAME')
+                  DEPT          10A         COLHDG('DEPT')
+                                            TEXT('DEPT')
+                K STU_ID

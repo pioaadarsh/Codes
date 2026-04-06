@@ -1,0 +1,4 @@
+                R PF1R                      PFILE(PF1)
+                K STU_ID
+                R PF2R                      PFILE(PF2)
+                K EMP_ID

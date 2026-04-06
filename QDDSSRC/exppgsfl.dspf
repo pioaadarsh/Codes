@@ -1,0 +1,42 @@
+     A*%%TS  SD  20250114  012039  RAJ         REL-V7R5M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      INDARA
+     A                                      PAGEDOWN(92 'Pagedown')
+     A          R SNGPGBUFF                 SFL
+     A*%%TS  SD  20250107  063539  RAJ         REL-V7R5M0  5770-WDS
+     A            D1NAME        10A  O 10 31
+     A            D1CLASS        2S 0O 10 55
+     A            D1ROLLNO       3S 0O 10 12
+     A          R SNGPGCTL                  SFLCTL(SNGPGBUFF)
+     A*%%TS  SD  20250114  012039  RAJ         REL-V7R5M0  5770-WDS
+     A                                      SFLSIZ(9999)
+     A                                      SFLPAG(0005)
+     A                                      CF03(03 'wxit')
+     A                                      OVERLAY
+     A  10                                  SFLDSP
+     A  11                                  SFLDSPCTL
+     A  13                                  SFLCLR
+     A  14                                  SFLEND(*MORE)
+     A            FIRSTRRN       4S 0H      SFLRCDNBR(CURSOR)
+     A                                  2 73DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(WHT)
+     A                                  3 73TIME
+     A                                      COLOR(WHT)
+     A                                  2  2USER
+     A                                      COLOR(WHT)
+     A                                  8 12'Roll No'
+     A                                      COLOR(WHT)
+     A                                  8 31'Name'
+     A                                      COLOR(WHT)
+     A                                  8 54'Class'
+     A                                      COLOR(WHT)
+     A                                  4 32'Expandable subfile'
+     A                                      COLOR(WHT)
+     A                                  2 26'Programmers.io India Pvt. Ltd.'
+     A                                      COLOR(YLW)
+     A          R FOOTER
+     A*%%TS  SD  20250107  074929  RAJ         REL-V7R5M0  5770-WDS
+     A                                 22  4'F3=Exit'
+     A                                      COLOR(BLU)

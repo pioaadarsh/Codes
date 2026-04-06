@@ -1,0 +1,90 @@
+     A*%%TS  SD  20250304  041847  AADARSH     REL-V7R5M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A          R DSR
+     A*%%TS  SD  20250304  041847  AADARSH     REL-V7R5M0  5770-WDS
+     A                                      CF03(03 'Exit')
+     A                                      OVERLAY
+     A                                  1  2USER
+     A                                  1 27'Company Details'
+     A                                      COLOR(BLU)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                  2 72TIME
+     A                                  6  2'Select one of the following:'
+     A                                      COLOR(PNK)
+     A                                  8  4'1. About'
+     A                                  9  4'2. Technologies'
+     A                                 10  4'3. About RPG'
+     A                                  8 13'Company'
+     A                                 20  2'Command'
+     A                                      COLOR(BLU)
+     A                                 20 10'Line:'
+     A                                      COLOR(BLU)
+     A                                 21  2'===>'
+     A                                      COLOR(TRQ)
+     A            CMDLINE       10Y 0B 21  8EDTCDE(4)
+     A                                      COLOR(TRQ)
+     A                                 23  2'F3=Exit'
+     A                                      COLOR(BLU)
+     A                                 23 24'ENTER=Continue'
+     A                                      COLOR(BLU)
+     A            MSG           20A  O 24  2COLOR(WHT)
+     A          R ABOUT
+     A*%%TS  SD  20250304  035530  AADARSH     REL-V7R5M0  5770-WDS
+     A                                      CF12(12 'Back')
+     A                                      OVERLAY
+     A                                  6  3'Programmers.io has been a trusted -
+     A                                      partner of many Fortune 500 compani-
+     A                                      es.'
+     A                                      COLOR(WHT)
+     A                                  7  3'our team specializes in hundreds o-
+     A                                      f technologies, from AI products an-
+     A                                      d'
+     A                                      COLOR(WHT)
+     A                                  8  3'IBM i legacy systems to a diverse -
+     A                                      range of software development'
+     A                                      COLOR(WHT)
+     A                                  9  3'solutions - all customized to suit-
+     A                                       your business needs.'
+     A                                      COLOR(WHT)
+     A                                  1 31'Programmers.io'
+     A                                      COLOR(BLU)
+     A                                 23  3'F12=Back'
+     A          R TECHNOLOGY
+     A*%%TS  SD  20250304  035530  AADARSH     REL-V7R5M0  5770-WDS
+     A                                      CF12(12 'Back')
+     A                                      OVERLAY
+     A                                  4  2'Technologies used in programmers.i-
+     A                                      o'
+     A                                      COLOR(BLU)
+     A                                  6  2'1. RPG'
+     A                                      COLOR(TRQ)
+     A                                  7  2'2. Java'
+     A                                      COLOR(TRQ)
+     A                                  8  2'3. Cobol'
+     A                                      COLOR(TRQ)
+     A                                  9  2'4. EDI'
+     A                                      COLOR(TRQ)
+     A                                 23  2'F12=Back'
+     A                                      COLOR(WHT)
+     A          R ABOUT_RPG
+     A*%%TS  SD  20250304  035530  AADARSH     REL-V7R5M0  5770-WDS
+     A                                      CF12(12 'back')
+     A                                      OVERLAY
+     A                                  1 36'RPG'
+     A                                      COLOR(BLU)
+     A                                  4  2'RPG is a high-level programming la-
+     A                                      nguage for business applications, i-
+     A                                      ntroduced'
+     A                                      COLOR(WHT)
+     A                                  5  2'in 1959 for the IBM 1401. It is mo-
+     A                                      st well known as the primary progra-
+     A                                      mming'
+     A                                      COLOR(WHT)
+     A                                  6  2'language of IBM s midrange compute-
+     A                                      r product line, including the IBM i'
+     A                                      COLOR(WHT)
+     A                                  7  2'operating system.'
+     A                                      COLOR(WHT)
+     A                                 23  2'F12=Back'

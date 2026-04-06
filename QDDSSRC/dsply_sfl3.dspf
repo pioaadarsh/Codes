@@ -1,0 +1,59 @@
+     A*%%TS  SD  20250408  005106  AADARSH     REL-V7R5M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      INDARA
+     A                                      CF03(03 'exit')
+     A                                      CF12(12 'cancel')
+     A                                      CF05(05 'refresh')
+     A          R HEADER
+     A*%%TS  SD  20250322  121359  AADARSH     REL-V7R5M0  5770-WDS
+     A                                  1  2USER
+     A                                  2 72TIME
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                  1 32'Programmers.io'
+     A                                      COLOR(BLU)
+     A            MHD0001       15A  O  2 32COLOR(WHT)
+     A                                      MSGID(MHD 0001 AADARSH/DMSGF)
+     A          R SFLDTL                    SFL
+     A*%%TS  SD  20250407  081458  AADARSH     REL-V7R5M0  5770-WDS
+     A            SFLRCDNBR      4S 0H
+     A            SFLID          3Y 0O  8  2EDTCDE(4)
+     A            SFLNAME       20A  O  8 15
+     A            SFLSALARY     10Y 0O  8 38EDTCDE(4)
+     A            SFLDATE        8Y 0O  8 60EDTWRD('  /  /    ')
+     A          R SFLCTL1                   SFLCTL(SFLDTL)
+     A*%%TS  SD  20250408  003938  AADARSH     REL-V7R5M0  5770-WDS
+     A                                      SFLSIZ(9999)
+     A                                      SFLPAG(0012)
+     A                                      CF06(06 'insert')
+     A                                      OVERLAY
+     A  31                                  SFLDSP
+     A  32                                  SFLDSPCTL
+     A  33                                  SFLCLR
+     A  34                                  SFLEND(*MORE)
+     A                                  6  2'Employee ID'
+     A                                      COLOR(WHT)
+     A                                  6 43'Employee Salary'
+     A                                      COLOR(WHT)
+     A                                  6 60'Date Of Joining'
+     A                                      COLOR(WHT)
+     A                                  6 15'Name       '
+     A                                      COLOR(WHT)
+     A            SCHID          3Y 0B  7  2EDTCDE(4)
+     A  21                                  DSPATR(RI)
+     A  21                                  DSPATR(PC)
+     A            SCHNAME       20A  B  7 15CHECK(LC)
+     A  22                                  DSPATR(RI)
+     A  22                                  DSPATR(PC)
+     A            SCHSAL         6Y 0B  7 42EDTCDE(4)
+     A  23                                  DSPATR(RI)
+     A  23                                  DSPATR(PC)
+     A            SCHDOJ         8Y 0B  7 60EDTWRD('  /  /    ')
+     A  24                                  DSPATR(RI)
+     A  24                                  DSPATR(PC)
+     A          R FOOTER
+     A*%%TS  SD  20250312  052405  SAHIL       REL-V7R5M0  5770-WDS
+     A                                      OVERLAY
+     A            FRTKEY        75A  O 23  2COLOR(BLU)
+     A            DS_ERR        70   O 24  2COLOR(WHT)

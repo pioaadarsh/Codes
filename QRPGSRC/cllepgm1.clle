@@ -1,0 +1,9 @@
+             PGM
+             DCL        VAR(&VAR1) TYPE(*DEC) LEN(5 0) VALUE(1)
+             DCL        VAR(&TOTALR) TYPE(*DEC) LEN(10 0)
+
+             RTVMBRD    FILE(AADARSH/PF2) NBRCURRCD(&TOTALR)
+             SNDUSRMSG  MSG(%Char(&VAR1))
+             SNDUSRMSG  MSG(%Char(&TOTALR))
+
+             ENDPGM

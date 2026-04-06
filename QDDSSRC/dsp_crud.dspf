@@ -1,0 +1,89 @@
+     A*%%TS  SD  20250317  075151  AADARSH     REL-V7R5M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      INDARA
+     A                                      CF03(03 'Exit')
+     A                                      CF05(05 'Refresh')
+     A                                      CF12(12 'Cancel')
+     A                                      CF23(23 'Confirm')
+     A          R HEADER
+     A*%%TS  SD  20250306  012732  AADARSH     REL-V7R5M0  5770-WDS
+     A                                  1  2USER
+     A                                  1 25'EMPLPOYEE DETAILS MAINTENANCE'
+     A                                      COLOR(WHT)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                  2 72TIME
+     A          R FOOTER
+     A*%%TS  SD  20250306  025735  AADARSH     REL-V7R5M0  5770-WDS
+     A                                      OVERLAY
+     A            MSG           70A  O 24  2COLOR(WHT)
+     A                                 23  2'F3=Exit  F5=Refresh  F12=Cancel'
+     A                                      COLOR(BLU)
+     A          R MAINSCREEN
+     A*%%TS  SD  20250305  050321  AADARSH     REL-V7R5M0  5770-WDS
+     A                                      INZRCD
+     A                                      OVERLAY
+     A                                  4  2'Type Options, press Enter.'
+     A                                      COLOR(BLU)
+     A                                  5  3'2=Edit  4=Delete  5=Display  7=Add'
+     A                                      COLOR(BLU)
+     A                                  7  3'Emp ID...'
+     A                                  9  3'Option...'
+     A                                      COLOR(WHT)
+     A            D1ID           3Y 0B  7 13EDTCDE(4)
+     A  51                                  DSPATR(RI)
+     A  51                                  DSPATR(PC)
+     A            D1OPT          1Y 0B  9 13EDTCDE(4)
+     A  52                                  DSPATR(RI)
+     A  52                                  DSPATR(PC)
+     A          R CRUDR
+     A*%%TS  SD  20250317  071436  AADARSH     REL-V7R5M0  5770-WDS
+     A                                      OVERLAY
+     A                                  6  2'Emp ID...........:'
+     A                                      COLOR(WHT)
+     A                                  8  2'Emp Name.........:'
+     A                                      COLOR(WHT)
+     A                                 10  2'Emp Phone No.....:'
+     A                                      COLOR(WHT)
+     A                                 12  2'Emp Address......:'
+     A                                      COLOR(WHT)
+     A                                 14  2'Emp Date Of Birth:'
+     A                                      COLOR(WHT)
+     A                                 16  2'Emp Salary.......:'
+     A                                      COLOR(WHT)
+     A            D2ID           3Y 0B  6 22EDTCDE(4)
+     A  50                                  DSPATR(RI)
+     A  50                                  DSPATR(PC)
+     A N97                                  DSPATR(UL)
+     A  97                                  DSPATR(PR)
+     A            D2NAME        20A  B  8 22
+     A N99                                  DSPATR(UL)
+     A  98                                  DSPATR(PR)
+     A  53                                  DSPATR(RI)
+     A  53                                  DSPATR(PC)
+     A                                      CHECK(LC)
+     A            D2PHNO        10Y 0B 10 22EDTCDE(4)
+     A N99                                  DSPATR(UL)
+     A  98                                  DSPATR(PR)
+     A  54                                  DSPATR(RI)
+     A  54                                  DSPATR(PC)
+     A            D2ADRS        20A  B 12 22
+     A N99                                  DSPATR(UL)
+     A  98                                  DSPATR(PR)
+     A  55                                  DSPATR(RI)
+     A  55                                  DSPATR(PC)
+     A                                      CHECK(LC)
+     A            D2SAL         10Y 0B 16 22EDTCDE(4)
+     A N99                                  DSPATR(UL)
+     A  98                                  DSPATR(PR)
+     A  57                                  DSPATR(RI)
+     A  57                                  DSPATR(PC)
+     A            D2CNF         30A  O  5  2COLOR(BLU)
+     A            HEADING1      14A  O  4 33COLOR(WHT)
+     A            D2DOB          8Y 0B 14 22
+     A  56                                  DSPATR(RI)
+     A N99                                  DSPATR(UL)
+     A  56                                  DSPATR(PC)
+     A  98                                  DSPATR(PR)
+     A                                      EDTWRD('  /  /    ')

@@ -1,0 +1,9 @@
+             PGM        PARM(&USERNAME &PASSWORD)
+
+             DCL        VAR(&USERNAME) TYPE(*CHAR) LEN(25)
+             DCL        VAR(&PASSWORD) TYPE(*CHAR) LEN(25)
+
+             SNDPGMMSG  MSG(&USERNAME)
+             SNDPGMMSG  MSG(&PASSWORD)
+
+             ENDPGM

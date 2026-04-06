@@ -1,0 +1,21 @@
+     **free
+       dcl-f Empl_pf1 usage(*input: *output :*update) keyed;
+       dcl-f Dsply2 Workstn;
+       dcl-s w1empid like(Emp_id);
+       *inlr=*on;
+       *in51=*on;
+       Dow *in03=*off;
+         Exfmt dsply2r;
+         emp_id=d1empid;
+         w1empid=emp_id;
+         chain w1empid empl_pf1r;
+         if %found();
+           *in51=*off;
+           d1Empid=emp_id ;
+           d1Empname=emp_name;
+           d1Empsal=emp_sal;
+         else;
+           *in51=*on;
+           d1error='Record does not Exists';
+         endif;
+       Enddo;

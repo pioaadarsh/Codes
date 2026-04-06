@@ -1,0 +1,9 @@
+                R RCDFMT1                   PFILE(TESTPF)
+                  TEST_VAR
+                  DATE_VAR
+                  TEST_VAR2
+                K TEST_VAR
+                R RCDFMT2                   PFILE(TESTPF2)
+                  TEST_VAR
+                  TEST_VAR2
+                K TEST_VAR
